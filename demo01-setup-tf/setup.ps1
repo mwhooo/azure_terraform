@@ -10,7 +10,7 @@ param(
 
 function add-topath {
     $oldvalue = [Environment]::GetEnvironmentVariable("path","User")
-    $newvalue = $oldvalue + "D:\Terraform"
+    $newvalue = $oldvalue + ";D:\Terraform"
     [Environment]::SetEnvironmentVariable("path",$newvalue,"User")
 }
 
